@@ -28,6 +28,7 @@ const BlogDetails = () => {
   useEffect(() => {
     getBlogDetail();
   }, [id]);
+  console.log(blog);
 
   //input change
   const handleChange = (e) => {
@@ -68,6 +69,7 @@ const BlogDetails = () => {
           display="flex"
           flexDirection={"column"}
           marginTop="30px"
+          backgroundColor='lightgrey'
         >
           <Typography
             variant="h2"
@@ -119,7 +121,7 @@ const BlogDetails = () => {
             variant="outlined"
             required
           />
-          <Button type="submit" color="warning" variant="contained">
+          <Button type="submit" color="info" variant="contained">
             Update
           </Button>
         </Box>

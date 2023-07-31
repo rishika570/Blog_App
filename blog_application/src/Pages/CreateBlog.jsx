@@ -50,6 +50,7 @@ const CreateBlog = () => {
           display="flex"
           flexDirection={"column"}
           marginTop="30px"
+          backgroundColor='lightgrey'
         >
           <Typography
             variant="h2"

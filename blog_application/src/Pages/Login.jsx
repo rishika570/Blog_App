@@ -52,12 +52,14 @@ const Login = () => {
           boxShadow="10px 10px 20px #ccc"
           padding={3}
           borderRadius={5}
+          backgroundColor='lightgrey'
         >
           <Typography
             variant="h4"
             sx={{ textTransform: "uppercase" }}
             padding={3}
             textAlign="center"
+            // color='white'
           >
             Login
           </Typography>
@@ -69,6 +71,7 @@ const Login = () => {
             type={"email"}
             required
             onChange={handleChange}
+            // background color='white'
           />
           <TextField
             placeholder="password"

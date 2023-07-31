@@ -15,7 +15,7 @@ import { Box, IconButton } from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import axios from 'axios';
 import toast from 'react-hot-toast';
-export default function BlogCard(
+export default function BlogCard({
   title,
   description,
   image,
@@ -23,7 +23,7 @@ export default function BlogCard(
   time,
   id,
   isUser
-) {
+}) {
   const navigate=useNavigate();
   const handleEdit=()=>{
     navigate(`/blog-details/${id}`);
@@ -32,7 +32,7 @@ export default function BlogCard(
     try{
     const {data}=await axios.delete(`/api/v1/blog/delete-blog/${id}`)
     if(data?.success){
-      toast.success('Blog deleted')
+      alert('Blog deleted')
       window.location.reload();
     }
     }catch(error){
